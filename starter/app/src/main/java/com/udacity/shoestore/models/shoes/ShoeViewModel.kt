@@ -17,6 +17,9 @@ class ShoeViewModel() : ViewModel() {
     private val _shoeList = MutableLiveData<MutableList<Shoe>>()
     val shoeList: LiveData<MutableList<Shoe>>
         get() = _shoeList
+    val shoeSize = MutableLiveData<String>()
+    val newShoe = MutableLiveData(Shoe("", 0.0, "", ""))
+
 
     init {
         _shoeList.value = mutableListOf(
@@ -59,18 +62,9 @@ class ShoeViewModel() : ViewModel() {
         _addShoeFlag.value = false
     }
 
-    fun addShoe(shoe: Shoe) {
-        _shoeList.value?.add(shoe)
+    fun addShoe() {
+        newShoe.value?.size = shoeSize.value?.toDouble() ?: 0.0
+        _shoeList.value?.add(newShoe.value!!)
     }
-
-    fun login() {
-        _userLogStatus.value = true
-    }
-
-    fun logout() {
-        _userLogStatus.value = false
-
-    }
-
 
 }

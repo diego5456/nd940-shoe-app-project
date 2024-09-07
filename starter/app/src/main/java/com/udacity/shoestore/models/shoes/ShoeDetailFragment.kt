@@ -9,9 +9,8 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.textfield.TextInputLayout
 import com.udacity.shoestore.databinding.ShoeDetailsFragmentBinding
-import com.udacity.shoestore.models.Shoe
 
-class ShoeDetailFragment: Fragment() {
+class ShoeDetailFragment : Fragment() {
     private lateinit var binding: ShoeDetailsFragmentBinding
 
     override fun onCreateView(
@@ -25,21 +24,11 @@ class ShoeDetailFragment: Fragment() {
             false
         )
         val shoeViewModel: ShoeViewModel by activityViewModels()
-        binding.saveButton.setOnClickListener{
-            if (!checkTextFieldsForErrors()) {
-                val shoeName = binding.nameEdit.text.toString()
-                val shoeSizeValue = binding.sizeEdit.text
-                var shoeSize: Double = 0.0
-                try {
-                    shoeSize = shoeSizeValue.toString().toDouble()
-                } catch (e: NumberFormatException) {
-                    binding.sizeLayout.error = "Invalid size"
-                }
+        binding.shoeViewModel = shoeViewModel
 
-                val shoeBrand = binding.nameEdit.text.toString()
-                val shoeDescription = binding.descriptionEdit.text.toString()
-                val shoe = Shoe(shoeName, shoeSize, shoeBrand, shoeDescription)
-                shoeViewModel.addShoe(shoe)
+        binding.saveButton.setOnClickListener {
+            if (!checkTextFieldsForErrors()) {
+                shoeViewModel.addShoe()
                 findNavController().navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoesFragment())
             }
         }
