@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+    <string name="user_email">User Email</string>
+    <string name="user_password">Password</string>
+    <string name="login_button">Login</string>
+    <string name="register_button">Register</string>
+    <string name="next">Next</string>
+    <string name="welcome_text_1">We\'re thrilled to have you here! Whether you\'re searching for the perfect pair of sneakers, stylish dress shoes, or comfy slippers, you\'ve come to the right place. Our app is designed to help you find shoes that match your unique style and needs with ease.</string>
+    <string name="welcome_text_2">Get ready to explore the latest trends, discover exclusive deals, and enjoy a seamless shopping experience. If you need any help or have questions, our support team is just a tap away.</string>
+    <string name="shoe_name">Name</string>
+    <string name="shoe_brand">Brand</string>
+    <string name="size">Size</string>
+    <string name="size_value_format"> %1$s</string>
+    <string name="description">Description</string>
+    <string name="save_button">Save</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="logout">logout</string>
+    <string name="instrution_1">👟 Viewing Shoes:\n\nYou can see your previously loaded list of shoes right here. Browse through your collection at any time!</string>
+    <string name="instrutions_2">➕ Adding More Shoes:\n\nClick the Add Button: Locate and tap the \"Add\" button.\nFill in the Details: Enter the necessary information for your new shoes (e.g., name, brand, size, etc.).\nSave Your Entry: Once you’ve filled out the information, hit \"Save\" to add the new shoes to your list.\nKeep your collection up-to-date with ease! Happy managing! 😊\n\n</string>
+</resources>
